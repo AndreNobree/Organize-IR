@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      # ddl-auto: validate # prod
+
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+logging:
+  level:
+    root: INFO
+    org.springframework.security: DEBUG
+    com.example.organizeir: DEBUG
+
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%level] [%thread] %logger{36} - %msg%n"
+
+server:
+  port: 8080

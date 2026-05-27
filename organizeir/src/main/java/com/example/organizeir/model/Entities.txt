@@ -1,0 +1,13 @@
+User
+├── Role
+├── Notification
+├── RefreshToken
+├── AuditLog
+├── TaxYear
+│     ├── Income
+│     ├── Expense
+│     ├── Deduction
+│     ├── Document
+│     │      └── DocumentExtraction
+│     ├── TaxSimulation
+│     └── Report

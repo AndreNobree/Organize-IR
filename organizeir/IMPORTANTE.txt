@@ -1,0 +1,10 @@
+MANIPULAÇÃO DE LOGS:
+
+    private static final Logger logger =
+            LoggerFactory.getLogger(UserService.class);
+
+    logger.info("Criando usuário");
+
+    logger.warn("Usuário já possui declaração pendente");
+
+    logger.error("Erro ao salvar usuário");
