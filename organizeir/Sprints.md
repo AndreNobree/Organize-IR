@@ -18,10 +18,10 @@
 ## Usuário
 - [x] Criar entidade User
 - [x] Criar entidade Role
-- [ ] Cadastro de usuário
-- [ ] Login JWT
-- [ ] Refresh Token
-- [ ] Logout
+- [x] Cadastro de usuário
+- [x] Login JWT
+- [x] Refresh Token
+- [x] Logout
 
 ## Segurança
 - [ ] Configurar Spring Security

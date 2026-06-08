@@ -8,9 +8,11 @@ import lombok.Setter;
 public class UserResponseDTO {
     private String email;
     private String token;
+    private String refreshToken;
 
-    public UserResponseDTO(String email, String token) {
+    public UserResponseDTO(String email, String token, String refreshToken) {
         this.email = email;
         this.token = token;
+        this.refreshToken = refreshToken;
     }
 }

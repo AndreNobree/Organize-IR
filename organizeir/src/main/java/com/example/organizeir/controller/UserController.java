@@ -1,6 +1,7 @@
 package com.example.organizeir.controller;
 
 
+import com.example.organizeir.dto.user.UserLoginDTO;
 import com.example.organizeir.dto.user.UserRegisterDTO;
 import com.example.organizeir.dto.user.UserResponseDTO;
 import com.example.organizeir.service.UserService;
@@ -22,5 +23,11 @@ public class UserController {
     public ResponseEntity<UserResponseDTO> register(@Valid @RequestBody UserRegisterDTO dto) {
         UserResponseDTO createdUser = userService.registerDefault(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<UserResponseDTO> login(@Valid @RequestBody UserLoginDTO dto){
+        UserResponseDTO loginUser = userService.login(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(loginUser);
     }
 }
